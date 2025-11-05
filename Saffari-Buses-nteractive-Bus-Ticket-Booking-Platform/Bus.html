@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saffari Buses </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="bus.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-bus"></i>
+                <span>Saffari Buses</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#search-section">Home</a></li>
+                    <li><a href="#offers-section">Deals</a></li>
+                    <li><a href="#popular-routes">Routes</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn">Log in</button>
+                <button class="btn btn-primary" id="signupBtn">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <div class="bus-animation">
+                <div class="bus">
+                    <div class="wheel front"></div>
+                    <div class="wheel back"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1>Travel Smarter with Saffari Buses</h1>
+                <p>Book your bus tickets online with the best deals and exclusive offers</p>
+                
+                <div class="booking-form">
+                    <form id="bookingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="from">From</label>
+                                <input type="text" id="from" class="form-control" placeholder="Origin City" required>
+                                <div class="error-message" id="fromError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="to">To</label>
+                                <input type="text" id="to" class="form-control" placeholder="Destination City" required>
+                                <div class="error-message" id="toError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" class="form-control" required>
+                                <div class="error-message" id="dateError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="passengers">Passengers</label>
+                                <select id="passengers" class="form-control" required>
+                                    <option value="1">1 Passenger</option>
+                                    <option value="2">2 Passengers</option>
+                                    <option value="3">3 Passengers</option>
+                                    <option value="4">4 Passengers</option>
+                                    <option value="5">5 Passengers</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary search-btn">
+                            <i class="fas fa-search"></i> Search Buses
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="section-title">
+                <h2>Why Choose Saffari Buses?</h2>
+                <p>Experience the best in bus travel with our premium services</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safe & Secure</h3>
+                    <p>Your safety is our top priority with sanitized buses and trained staff</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Best Prices</h3>
+                    <p>Get the best deals and exclusive discounts on all your bookings</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>On Time</h3>
+                    <p>We ensure timely departures and arrivals for a smooth journey</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our customer support team is available round the clock to assist you</p>
+                </div>
+            </div>
+            
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <i class="fas fa-bus" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <h3>Premium Experience</h3>
+                        <p>Click to see what's inside</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Luxury Features</h3>
+                        <p>WiFi • Charging Ports • Reclining Seats • Onboard Entertainment</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Routes Section -->
+        <section class="popular-routes" id="popular-routes">
+            <div class="section-title">
+                <h2>Popular Routes</h2>
+                <p>Travel between these popular destinations with ease</p>
+            </div>
+            
+            <div class="routes-grid">
+                <div class="route-card">
+                    <div class="route-image" style="background-image: url(taj.jpg);"></div>
+                    <div class="route-content">
+                        <div class="route-title">
+                            <h3>Delhi to Jaipur</h3>
+                            <div class="route-price">₹899</div>
+                        </div>
+                        <div class="route-details">
+                            <div><i class="fas fa-clock"></i> 5h 30m</div>
+                            <div><i class="fas fa-bus"></i> 12 Buses</div>
+                        </div>
+                        <button class="btn btn-primary" data-route="Delhi to Jaipur">Book Now</button>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-image" style="background-image: url(pune.jpg);"></div>
+                    <div class="route-content">
+                        <div class="route-title">
+                            <h3>Mumbai to Pune</h3>
+                            <div class="route-price">₹550</div>
+                        </div>
+                        <div class="route-details">
+                            <div><i class="fas fa-clock"></i> 3h 15m</div>
+                            <div><i class="fas fa-bus"></i> 20 Buses</div>
+                        </div>
+                        <button class="btn btn-primary" data-route="Mumbai to Pune">Book Now</button>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-image" style="background-image: url(chennai.jpg);"></div>
+                    <div class="route-content">
+                        <div class="route-title">
+                            <h3>Bangalore to Chennai</h3>
+                            <div class="route-price">₹1,299</div>
+                        </div>
+                        <div class="route-details">
+                            <div><i class="fas fa-clock"></i> 6h 45m</div>
+                            <div><i class="fas fa-bus"></i> 15 Buses</div>
+                        </div>
+                        <button class="btn btn-primary" data-route="Bangalore to Chennai">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bus List Section -->
+        <section class="bus-list" id="busListSection" style="display: none;">
+            <div class="section-title">
+                <h2>Available Buses</h2>
+                <p>Select from our premium fleet of buses</p>
+            </div>
+            
+            <div id="busList">
+                <!-- Bus cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Offers Section -->
+        <section class="offers-section" id="offers-section">
+            <div class="section-title">
+                <h2>Exclusive Offers</h2>
+                <p>Don't miss out on these amazing deals!</p>
+            </div>
+            
+            <div class="offers-container">
+                <!-- Offer 1 -->
+                <div class="offer-card">
+                    <div class="offer-badge">Limited Time</div>
+                    <div class="offer-content">
+                        <div class="offer-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <h3>First Ride Discount</h3>
+                        <p class="offer-description">Get 20% off on your first bus ticket booking with Saffari Buses. Perfect for new customers!</p>
+                        
+                        <div class="offer-timer">
+                            <div class="timer-unit">
+                                <span class="timer-value" id="days">02</span>
+                                <span class="timer-label">Days</span>
+                            </div>
+                            <div class="timer-unit">
+                                <span class="timer-value" id="hours">12</span>
+                                <span class="timer-label">Hours</span>
+                            </div>
+                            <div class="timer-unit">
+                                <span class="timer-value" id="minutes">45</span>
+                                <span class="timer-label">Mins</span>
+                            </div>
+                            <div class="timer-unit">
+                                <span class="timer-value" id="seconds">30</span>
+                                <span class="timer-label">Secs</span>
+                            </div>
+                        </div>
+                        
+                        <div class="offer-details">
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Valid for first-time users only</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Maximum discount of ₹500</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Applicable on all routes</span>
+                            </div>
+                        </div>
+                        
+                        <div class="offer-code">
+                            Use Code: <span class="code">SAFFARI20</span>
+                        </div>
+                        
+                        <div class="offer-footer">
+                            <button class="btn btn-primary apply-offer" data-code="SAFFARI20">Apply Offer</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Offer 2 -->
+                <div class="offer-card">
+                    <div class="offer-badge">Weekend Special</div>
+                    <div class="offer-content">
+                        <div class="offer-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Weekend Getaway</h3>
+                        <p class="offer-description">Book your weekend travel and get flat 15% cashback on all bookings made on Saturday and Sunday.</p>
+                        
+                        <div class="weekend-calendar">
+                            <div class="day">Mon</div>
+                            <div class="day">Tue</div>
+                            <div class="day">Wed</div>
+                            <div class="day">Thu</div>
+                            <div class="day">Fri</div>
+                            <div class="day active">Sat</div>
+                            <div class="day active">Sun</div>
+                        </div>
+                        
+                        <div class="cashback-animation">
+                            <div class="cashback-text">15% CASHBACK</div>
+                        </div>
+                        
+                        <div class="bonus-features">
+                            <div class="bonus-item">
+                                <i class="fas fa-wifi"></i>
+                                <span>Free WiFi</span>
+                            </div>
+                            <div class="bonus-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>Meals Included</span>
+                            </div>
+                            <div class="bonus-item">
+                                <i class="fas fa-tv"></i>
+                                <span>Entertainment</span>
+                            </div>
+                        </div>
+                        
+                        <div class="offer-code">
+                            Use Code: <span class="code">WEEKEND15</span>
+                        </div>
+                        
+                        <div class="offer-footer">
+                            <button class="btn btn-primary apply-offer" data-code="WEEKEND15">Apply Offer</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Offer 3 -->
+                <div class="offer-card">
+                    <div class="offer-badge">Refer & Earn</div>
+                    <div class="offer-content">
+                        <div class="offer-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h3>Refer a Friend</h3>
+                        <p class="offer-description">Refer a friend and both earn a ₹100 travel credit on their first booking. Share the joy of travel!</p>
+                        
+                        <div class="points-counter">
+                            <div class="points-display">
+                                <span class="points">₹100</span>
+                                <span class="points-label">Travel Credit</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="offer-details">
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Both you and your friend get ₹100</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>No limit on referrals</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Credit valid for 90 days</span>
+                            </div>
+                        </div>
+                        
+                        <div class="offer-code">
+                            Use Code: <span class="code">REFER100</span>
+                        </div>
+                        
+                        <div class="offer-footer">
+                            <button class="btn btn-primary apply-offer" data-code="REFER100">Apply Offer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seat Selection Section -->
+        <section class="seat-selection" id="seatSelection">
+            <h2>Select Your Seats</h2>
+            <p>Choose your preferred seats for a comfortable journey</p>
+            
+            <div class="passenger-selection">
+                <span>Number of Passengers:</span>
+                <div class="passenger-controls">
+                    <button class="passenger-btn" id="decreasePassengers">-</button>
+                    <span class="passenger-count" id="passengerCount">1</span>
+                    <button class="passenger-btn" id="increasePassengers">+</button>
+                </div>
+                <span id="passengerLimitMessage" class="error-message"></span>
+            </div>
+            
+            <div class="seat-info">
+                <div class="seat-info-item">
+                    <div class="seat-info-color available-color"></div>
+                    <span>Available</span>
+                </div>
+                <div class="seat-info-item">
+                    <div class="seat-info-color selected-color"></div>
+                    <span>Selected</span>
+                </div>
+                <div class="seat-info-item">
+                    <div class="seat-info-color occupied-color"></div>
+                    <span>Occupied</span>
+                </div>
+            </div>
+            
+            <div class="seat-layout" id="seatLayout">
+                <!-- Seats will be dynamically generated here -->
+            </div>
+            
+            <div class="selected-seats-info">
+                <p>Selected Seats: <span id="selectedSeatsCount">0</span></p>
+                <p>Total Price: <span id="selectedSeatsPrice">₹0</span></p>
+            </div>
+            
+            <div class="modal-buttons">
+                <button class="btn btn-outline" id="cancelSeatSelection">Cancel</button>
+                <button class="btn btn-primary" id="proceedToPayment">Proceed to Payment</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Saffari Buses</h3>
+                <p>Your trusted partner for comfortable and affordable bus travel across India.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#offers-section">Offers</a></li>
+                    <li><a href="#popular-routes">Popular Routes</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Bus Terminal, Mumbai, India</li>
+                    <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                    <li><i class="fas fa-envelope"></i> support@saffaribuses.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Saffari Buses. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closePaymentModal">&times;</span>
+            <h2>Complete Payment</h2>
+            <p>Choose your preferred payment method</p>
+            
+            <div class="payment-methods">
+                <div class="payment-method" data-method="card">
+                    <div class="payment-icon">
+                        <i class="far fa-credit-card"></i>
+                    </div>
+                    <div>Credit/Debit Card</div>
+                </div>
+                <div class="payment-method" data-method="upi">
+                    <div class="payment-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div>UPI Payment</div>
+                </div>
+                <div class="payment-method" data-method="netbanking">
+                    <div class="payment-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div>Net Banking</div>
+                </div>
+                <div class="payment-method" data-method="wallet">
+                    <div class="payment-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div>Wallet</div>
+                </div>
+            </div>
+            
+            <!-- Card Payment Form -->
+            <div class="payment-form" id="cardForm">
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cardName">Name on Card</label>
+                    <input type="text" id="cardName" class="form-control" placeholder="John Doe">
+                </div>
+                
+                <div class="card-details">
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" id="expiryDate" class="form-control" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" class="form-control" placeholder="123" maxlength="3">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- UPI Payment Form -->
+            <div class="payment-form" id="upiForm">
+                <div class="form-group">
+                    <label for="upiId">UPI ID</label>
+                    <input type="text" id="upiId" class="form-control" placeholder="yourname@upi">
+                </div>
+            </div>
+            
+            <!-- Net Banking Form -->
+            <div class="payment-form" id="netbankingForm">
+                <div class="form-group">
+                    <label for="bankSelect">Select Bank</label>
+                    <select id="bankSelect" class="form-control">
+                        <option value="">Choose your bank</option>
+                        <option value="sbi">State Bank of India</option>
+                        <option value="hdfc">HDFC Bank</option>
+                        <option value="icici">ICICI Bank</option>
+                        <option value="axis">Axis Bank</option>
+                        <option value="pnb">Punjab National Bank</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Wallet Form -->
+            <div class="payment-form" id="walletForm">
+                <div class="form-group">
+                    <label for="walletSelect">Select Wallet</label>
+                    <select id="walletSelect" class="form-control">
+                        <option value="">Choose your wallet</option>
+                        <option value="paytm">Paytm</option>
+                        <option value="phonepe">PhonePe</option>
+                        <option value="gpay">Google Pay</option>
+                        <option value="amazonpay">Amazon Pay</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="booking-details">
+                <h3>Payment Summary</h3>
+                <p><span class="label">Total Amount:</span> <span id="paymentAmount">₹0</span></p>
+            </div>
+            
+            <div class="modal-buttons">
+                <button class="btn btn-outline" id="cancelPayment">Cancel</button>
+                <button class="btn btn-primary" id="confirmPayment">Confirm Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="ticketModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeTicketModal">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Booking Confirmed!</h2>
+            <p>Your bus ticket has been successfully booked. Details are below.</p>
+            
+            <div class="ticket" id="ticketDetails">
+                <div class="ticket-header">
+                    <h3>Saffari Buses</h3>
+                    <p>E-Ticket</p>
+                </div>
+                <div class="booking-details">
+                    <p><span class="label">Booking ID:</span> <span id="ticketBookingId"></span></p>
+                    <p><span class="label">Passenger Name:</span> <span id="ticketPassengerName"></span></p>
+                    <p><span class="label">Route:</span> <span id="ticketRoute"></span></p>
+                    <p><span class="label">Date:</span> <span id="ticketDate"></span></p>
+                    <p><span class="label">Departure:</span> <span id="ticketDeparture"></span></p>
+                    <p><span class="label">Seats:</span> <span id="ticketSeats"></span></p>
+                    <p><span class="label">Total Amount:</span> <span id="ticketAmount"></span></p>
+                </div>
+                <!-- <div class="ticket-qr">
+                    <div class="ticket-qr-placeholder">
+                        QR Code
+                    </div>
+                    <p>Scan at boarding</p>
+                </div> -->
+                <div class="booking-details">
+                    <p><span class="label">Boarding Point:</span> Central Bus Station</p>
+                    <p><span class="label">Reporting Time:</span> 30 minutes before departure</p>
+                </div>
+            </div>
+            
+            <div class="modal-buttons">
+                <button class="btn btn-outline" id="closeTicketBtn">Close</button>
+                <button class="btn btn-primary" id="printTicketBtn">Print Ticket</button>
+                <button class="btn btn-primary" id="downloadTicketBtn">Download Ticket</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeLoginModal">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" id="loginEmail" class="form-control" placeholder="Email Address" required>
+                    <div class="error-message" id="loginEmailError"></div>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" class="form-control" placeholder="Password" required>
+                    <div class="error-message" id="loginPasswordError"></div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeSignupModal">&times;</span>
+            <h2>Create an Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <input type="text" id="signupName" class="form-control" placeholder="Full Name" required>
+                    <div class="error-message" id="signupNameError"></div>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="signupEmail" class="form-control" placeholder="Email Address" required>
+                    <div class="error-message" id="signupEmailError"></div>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="signupPassword" class="form-control" placeholder="Password" required>
+                    <div class="error-message" id="signupPasswordError"></div>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="signupConfirmPassword" class="form-control" placeholder="Confirm Password" required>
+                    <div class="error-message" id="signupConfirmPasswordError"></div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="notification-content">
+            <p id="notificationText">Operation completed successfully!</p>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="spinner" id="loadingSpinner"></div>
+
+    <script src="action.js"></script>
+</body>
+</html>
